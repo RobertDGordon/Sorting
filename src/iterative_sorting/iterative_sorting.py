@@ -22,14 +22,24 @@ def selection_sort( arr ):
         arr[smallest_index] = temp
     return arr
 
-selection_sort(testArr)
-print(f'\n{testArr}')
+# selection_sort(testArr)
+# print(f'\n{testArr}')
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
 
+    for i in range(0, len(arr)):
+        for j in range(0, len(arr) - 1):
+            if arr[j] > arr[j + 1]:
+                print(f'{arr[j]} > {arr[j + 1]}')
+                temp = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j + 1] = temp
+
     return arr
 
+bubble_sort(testArr)
+print(f'\n{testArr}')
 
 # STRETCH: implement the Count Sort function below
 def count_sort( arr, maximum=-1 ):
