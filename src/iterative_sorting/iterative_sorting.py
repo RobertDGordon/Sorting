@@ -12,8 +12,8 @@ def selection_sort( arr ):
         # print(f'{arr[cur_index]}, {arr[next_index]}')
         for j in range(cur_index + 1, len(arr)):
             next_index = j
-            if (arr[smallest_index] < arr[next_index]):
-                print(f'{arr[smallest_index]} less than, next {arr[next_index]}')
+            if (arr[smallest_index] > arr[next_index]):  #Switch check for
+                print(f'{arr[smallest_index]} greater than, next {arr[next_index]}')
                 smallest_index = next_index
                 # print(f'smallest index {smallest_index} now set to current')
         # TO-DO: swap
