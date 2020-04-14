@@ -25,17 +25,17 @@ def merge( arrA, arrB ):
 def merge_sort( arr ):
     # TO-DO
     # print(arr)
-    if (len(arr) == 1):
+    if (len(arr) <= 1): #Set to less than or equal to 1 instead of == 1 to account for length 0
         return arr
     mid_index = len(arr) // 2
     # print(f'Mid index: {mid_index}')
     arr1 = arr[mid_index:]
     arr2 = arr[:mid_index]
 
-    arr1 = merge_sort(arr1)
-    arr2 = merge_sort(arr2)
+    # arr1 = merge_sort(arr1)
+    # arr2 = merge_sort(arr2)
 
-    return merge(arr1, arr2)
+    return merge(merge_sort(arr1), merge_sort(arr2))
 
 # merge_sort(testArr)
 print(merge_sort(testArr))
